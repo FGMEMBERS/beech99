@@ -14,11 +14,19 @@ Dec 28, 2002 Michael Selig, m-selig@uiuc.edu
 
  <sim>
 
-  <description>Beech 99 (UIUC)</description>
+  <description>Beech 99</description>
+
 
   <flight-model>larcsim</flight-model>
   <aero>uiuc</aero>
   <aircraft-dir>Aircraft/UIUC/beech99-v1</aircraft-dir>
+
+
+  <systems>
+    <electrical>
+      <path>Aircraft/beech99/beech99-electrical.xml</path>
+    </electrical>
+  </systems>
 
   <sound>
    <audible>true</audible>
@@ -26,17 +34,27 @@ Dec 28, 2002 Michael Selig, m-selig@uiuc.edu
   </sound>
 
   <panel>
-   <path>Aircraft/c172/Panels/c172-vfr-panel.xml</path>
+   <path>Aircraft/beech99/beech99-panel.xml</path>
    <visibility>true</visibility>
   </panel>
 
-  <panel_2>
-   <path>Aircraft/c172/Panels/c172-trans-mini-panel.xml</path>
-  </panel_2>
 
   <model>
    <path>Aircraft/beech99/Models/beech99-model.xml</path>
   </model>
+
+<!--
+<engines>
+  <engine n="0">
+   <engine-num type="int">0</engine-num>
+   <running>true</running>
+ </engine>
+ <engine n="1">
+   <engine-num type="int">1</engine-num>
+   <running>true</running>
+ </engine>
+</engines>
+-->
 
   <view n="1">
    <config>

@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+
+<!--
+
+-->
+
+<PropertyList>
+ <name>Tailnumber</name>
+ <w-base>72</w-base>
+ <h-base>18</h-base>
+
+ <layers>
+
+  <layer>
+   <name>background</name>
+   <texture>
+    <path>Aircraft/beech99/Instruments/Textures/b99-tailnumber-256.rgb</path>
+    <x1>0.0</x1>
+    <y1>0.0</y1>
+    <x2>0.28125</x2>
+    <y2>0.0703125</y2>
+   </texture>
+  </layer>
+
+ </layers>
+
+</PropertyList>

@@ -1,0 +1,71 @@
+<PropertyList>
+
+ <name>gear</name>
+ <w-base>25</w-base>
+ <h-base>71</h-base>
+
+<layers>
+ <layer>
+   <name>Gear Lever</name>
+   <type>switch</type>
+    <layer>
+     <condition>
+      <property>/controls/gear/gear-down</property>
+     </condition>
+     <name>on</name>
+     <texture>
+     <path>Aircraft/beech99/Instruments/Textures/b99-geardn-256.rgb</path>
+     <x1>0.0</x1>
+     <y1>0.0</y1>
+     <x2>0.09765625</x2>
+     <y2>0.27734375</y2>
+     </texture>
+     <w>25</w>
+     <h>71</h>
+    </layer>
+    
+    <layer>
+     <name>off</name>
+     <texture>
+     <path>Aircraft/beech99/Instruments/Textures/b99-gearup-256.rgb</path>
+     <x1>0.0</x1>
+     <y1>0.0</y1>
+     <x2>0.09765625</x2>
+     <y2>0.23046875</y2>
+     </texture>
+     <w>25</w>
+     <h>59</h>
+     
+   <transformations>  
+    <transformation>
+    <type>y-shift</type>
+    <offset>6</offset>
+    </transformation>
+   </transformations>
+  
+   </layer>
+   </layer>
+ </layers>
+
+ <actions>
+
+  <action>
+   <name>extend</name>
+   <button>0</button>
+   <x>-16</x>
+   <y>-50</y>
+   <w>32</w>
+   <h>96</h>
+   <binding>
+    <command>property-toggle</command>
+    <property>/controls/gear/gear-down</property>
+   
+    <min>1.0</min>
+    <max>0.0</max>
+    
+   </binding>
+  </action> 
+
+</actions>
+
+</PropertyList>

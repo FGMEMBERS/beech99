@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+
+<!--
+
+-->
+
+<PropertyList>
+
+ <name>Beech 99 Airspeed Indicator (Knots)</name>
+<!--
+Specify the size that the gauge will be
+--> 
+  <w-base>256</w-base>
+  <h-base>256</h-base>
+   
+   <layers>
+    <layer>
+     <name>gauge face</name>
+     <texture>   
+     <path>Aircraft/beech99/Instruments/Textures/b99-asi-256.rgb</path>
+     <x1>0.0</x1>
+     <y1>0.0</y1>
+     <x2>1.0</x2>
+     <y2>1.0</y2>
+     </texture>
+    </layer>
+    
+    <layer>
+    <name>needle</name>
+   <texture>
+    <path>Aircraft/beech99/Instruments/Textures/b99-misc-1.rgb</path>
+    <x1>0.8</x1>
+    <y1>0.78125</y1>
+    <x2>0.8375</x2>
+    <y2>1.0</y2>
+   </texture>
+   <w>12.2</w>
+   <h>98</h>
+   <transformations>
+     <transformation>
+      <type>rotation</type>
+      <property>/instrumentation/airspeed-indicator/indicated-speed-kt</property>
+      <min>10.0</min>
+      <max>350.0</max>
+      <scale>1.0</scale>
+
+       <interpolation>
+       <entry><ind>  20</ind><dep>    8</dep></entry>
+       <entry><ind>  40</ind><dep>   22</dep></entry>
+       <entry><ind>  50</ind><dep>   36</dep></entry>
+       <entry><ind>  60</ind><dep>   50</dep></entry>
+       <entry><ind> 70</ind><dep>   65</dep></entry>
+       <entry><ind> 80</ind><dep>  80</dep></entry>
+       <entry><ind> 100</ind><dep>  107</dep></entry>
+       <entry><ind> 140</ind><dep>  165</dep></entry>
+       <entry><ind> 160</ind><dep>  195</dep></entry>
+       <entry><ind> 180</ind><dep>  223</dep></entry>
+       <entry><ind> 200</ind><dep>  252</dep></entry>
+       <entry><ind> 220</ind><dep>  282</dep></entry>
+       <entry><ind> 240</ind><dep>  308</dep></entry>
+       <entry><ind> 260</ind><dep>  337</dep></entry>
+       <entry><ind> 265</ind><dep>  343</dep></entry>
+       </interpolation>
+                
+     </transformation>
+     
+    <transformation>
+    <type>y-shift</type>
+    <offset>44</offset>
+    </transformation>
+    
+   </transformations>
+  </layer> 
+ 
+ <layer>
+  <name>button</name>
+  <texture>
+  <path>Aircraft/beech99/Instruments/Textures/b99-misc-1.rgb</path>
+  <x1>0.6171875</x1>
+  <y1>0.2421875</y1>
+  <x2>0.7890625</x2>
+  <y2>0.4140625</y2>
+  </texture>
+  <w>28</w>
+  <h>28</h>
+  </layer>
+  
+
+  </layers>
+</PropertyList>
+

@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<!--
+ A simple indicator lamp. Used here as a brake light.
+ John Check <j4strngs@usa.net>
+-->
+
+<PropertyList>
+ <name>Gear Indicator</name>
+ <w-base>46</w-base>
+ <h-base>45</h-base>
+
+ <layers>
+<!-- The "bulb" -->
+ <layer>
+   <name>Gear light</name>
+   <type>switch</type>
+    <layer>
+     <condition>
+      <property>/controls/gear/gear-down</property>
+     </condition>
+     <name>on</name>
+     <texture>
+     <path>Aircraft/beech99/Instruments/Textures/b99-gearind-nslr-256.rgb</path>
+     <x1>0.0</x1>
+     <y1>0.0</y1>
+     <x2>0.1796875</x2>
+     <y2>0.17578125</y2>
+     </texture>
+     <w>46</w>
+     <h>45</h>
+    </layer>
+    
+    <layer>
+     <name>off</name>
+     <texture>
+     <path>Aircraft/beech99/Instruments/Textures/b99-gearind-256.rgb</path>
+     <x1>0.0</x1>
+     <y1>0.0</y1>
+     <x2>0.1796875</x2>
+     <y2>0.17578125</y2>
+     </texture>
+     <w>46</w>
+     <h>45</h>
+   </layer>
+  </layer>
+ </layers>
+ 
+ <actions>
+  <action>
+   <desc>gear</desc>
+   <button>0</button>
+   <x>-32</x>
+   <y>-13</y>
+   <w>46</w>
+   <h>45</h>
+   <binding>
+    <command>property-toggle</command>
+    <property>/controls/gear/gear-down</property>
+   </binding>
+  </action>
+ </actions>
+
+</PropertyList>
