@@ -20,23 +20,23 @@ October 23 2001 John Check, fgpanels@rockfish.net
   <fuel-fraction>1.0</fuel-fraction>
 
   <panel>
-   <path>Aircraft/mybeech99/beech99-panel.xml</path>
+   <path>Aircraft/beech99/beech99-panel.xml</path>
    <visibility>true</visibility>
   </panel>
 
   <model>
-   <path>Aircraft/mybeech99/Models/beech99-model.xml</path>
+   <path>Aircraft/beech99/Models/beech99-model.xml</path>
   </model> 
 
    <systems>
     <electrical>
-      <path>Aircraft/mybeech99/beech99-electrical.xml</path>
+      <path>Aircraft/beech99/beech99-electrical.xml</path>
     </electrical>
   </systems>
   
   <sound>
    <audible>true</audible>
-   <path>Aircraft/mybeech99/beech99-sound.xml</path>
+   <path>Aircraft/beech99/beech99-sound.xml</path>
   </sound>
 
   <hud>
