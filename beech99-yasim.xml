@@ -1,3 +1,4 @@
+<!-- http://www.airliners.net/info/stats.main?id=66 -->
 <!-- http://www.takeflightvideo.com/beech99.htm -->
 
 <airplane mass="9619">
@@ -101,10 +102,11 @@
 <propeller x="-2.70" y="2.10" z="0.25"
            mass="800" moment="12" radius="1.0"
            eng-power="680" eng-rpm="2700"
-           turbo-mul="2" wastegate-mp="40"
-           cruise-power="157" cruise-speed="195"
+           turbo-mul="2" wastegate-mp="29"
+           takeoff-power="400" takeoff-rpm="1900"
+           cruise-power="600" cruise-speed="220"
            cruise-rpm="2100" cruise-alt="20000"
-           min-rpm="800" max-rpm="2700">
+           min-rpm="800" max-rpm="2400">
   <actionpt x="-2.70" y="2.10" z="0.25"/>
   <control-input axis="/controls/engines/engine[0]/throttle" control="THROTTLE"/>
   <control-input axis="/controls/engines/engine[0]/starter" control="STARTER"/>
@@ -116,10 +118,11 @@
 <propeller x="-2.70" y="-2.10" z="0.25"
            mass="800" moment="12" radius="1.0"
            eng-power="680" eng-rpm="2700"
-           turbo-mul="2" wastegate-mp="40"
-           cruise-power="157" cruise-speed="195"
+           turbo-mul="2" wastegate-mp="29"
+           takeoff-power="400" takeoff-rpm="1900"
+           cruise-power="600" cruise-speed="220"
            cruise-rpm="2100" cruise-alt="20000"
-           min-rpm="800" max-rpm="2700">
+           min-rpm="800" max-rpm="2400">
   <actionpt x="-2.70" y="-2.10" z="0.25"/>
   <control-input axis="/controls/engines/engine[1]/throttle" control="THROTTLE"/>
   <control-input axis="/controls/engines/engine[1]/starter" control="STARTER"/>
