@@ -1,5 +1,6 @@
 <!-- http://www.airliners.net/info/stats.main?id=66 -->
 <!-- http://www.takeflightvideo.com/beech99.htm -->
+<!-- http://www.flywestwind.com/WTC/Pprograms/turboprops.htm -->
 
 <airplane mass="9619">
 
@@ -101,15 +102,13 @@
   <control-output control="EXTEND" prop="/gear/gear[1]/position-norm"/>
 </gear>
 
-           <!-- takeoff-power="500" takeoff-rpm="1900" -->
-
 <propeller x="-2.70" y="2.10" z="0.25"
            mass="1200" moment="12" radius="1.0"
-           cruise-speed="355" cruise-rpm="2400"
+           cruise-speed="310" cruise-rpm="1700"
            cruise-power="600" cruise-alt="20000"
-           min-rpm="500" max-rpm="2400">
+           min-rpm="1000" max-rpm="1700">
   <turbine-engine
-           eng-power="680" eng-rpm="2400"
+           eng-power="680" eng-rpm="1700"
            alt="20000"
            flat-rating="780"
            min-n2="65" max-n2="100"
@@ -127,15 +126,13 @@
             control="ADVANCE"/>
 </propeller>
 
-           <!-- takeoff-power="500" takeoff-rpm="1900" -->
-
 <propeller x="-2.70" y="-2.10" z="0.25"
            mass="1200" moment="12" radius="1.0"
-           cruise-speed="355" cruise-rpm="2400"
+           cruise-speed="310" cruise-rpm="1700"
            cruise-power="600" cruise-alt="20000"
-           min-rpm="500" max-rpm="2400">
+           min-rpm="1000" max-rpm="1700">
   <turbine-engine
-           eng-power="680" eng-rpm="2400"
+           eng-power="680" eng-rpm="1700"
            alt="20000"
            flat-rating="780"
            min-n2="65" max-n2="100"
