@@ -30,7 +30,7 @@ Dec 28, 2002 Michael Selig, m-selig@uiuc.edu
 
   <sound>
    <audible>true</audible>
-   <path>Aircraft/beech99/Sounds/uiuc/beech99-sound.xml</path>
+   <path>Aircraft/beech99/Sounds/beech99-sound.xml</path>
   </sound>
 
   <panel>
