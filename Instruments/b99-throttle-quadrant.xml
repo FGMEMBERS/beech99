@@ -14,8 +14,8 @@
   <engine-throttle1-select>/controls/engines/engine[1]/throttle</engine-throttle1-select>
   <prop-advance0-select>/controls/engines/engine[0]/propeller-pitch</prop-advance0-select>
   <prop-advance1-select>/controls/engines/engine[1]/propeller-pitch</prop-advance1-select>
-  <engine-mixture0-select>/controls/engines/engine[0]/mixture</engine-mixture0-select>
-  <engine-mixture1-select>/controls/engines/engine[1]/mixture</engine-mixture1-select>
+  <engine-condition0-select>/controls/engines/engine[0]/condition</engine-condition0-select>
+  <engine-condition1-select>/controls/engines/engine[1]/condition</engine-condition1-select>
  </params>
 
  <layers>
@@ -144,10 +144,10 @@
    </transformations>
   </layer>
 
-<!-- mixture -->
+<!-- condition -->
 
   <layer>
-   <name>mixture 0 handle</name>
+   <name>condition 0 handle</name>
    <texture>
     <path>Aircraft/beech99/Instruments/Textures/b99-handles.rgb</path>
     <x1>0.0</x1>
@@ -164,7 +164,7 @@
     </transformation>
     <transformation>
      <type>y-shift</type>
-     <property alias="../../../../../params/engine-mixture0-select"/>
+     <property alias="../../../../../params/engine-condition0-select"/>
      <min>0.0</min>
      <max>1.0</max>
      <scale>40</scale>
@@ -173,7 +173,7 @@
    </transformations>
   </layer>
   <layer>
-   <name>mixture 1 handle</name>
+   <name>condition 1 handle</name>
    <texture>
     <path>Aircraft/beech99/Instruments/Textures/b99-handles.rgb</path>
     <x1>0.0</x1>
@@ -190,7 +190,7 @@
     </transformation>
     <transformation>
      <type>y-shift</type>
-     <property alias="../../../../../params/engine-mixture1-select"/>
+     <property alias="../../../../../params/engine-condition1-select"/>
      <min>0.0</min>
      <max>1.0</max>
      <scale>40</scale>
@@ -671,7 +671,7 @@
    </binding>
   </action>
   
-<!-- mixture 0--> 
+<!-- condition 0--> 
   <action>
    <name>small decrease</name>
    <button>0</button>
@@ -681,7 +681,7 @@
    <h>35</h>
    <binding>
     <command>property-adjust</command>
-    <property alias="../../../../params/engine-mixture0-select"/>
+    <property alias="../../../../params/engine-condition0-select"/>
     <step>-0.01</step>
     <min>0</min>
     <max>1.0</max>
@@ -698,7 +698,7 @@
    <h>35</h>
    <binding>
     <command>property-adjust</command>
-    <property alias="../../../../params/engine-mixture0-select"/>
+    <property alias="../../../../params/engine-condition0-select"/>
     <step>0.01</step>
     <min>0</min>
     <max>1.0</max>
@@ -715,7 +715,7 @@
    <h>35</h>
    <binding>
     <command>property-adjust</command>
-    <property alias="../../../../params/engine-mixture0-select"/>
+    <property alias="../../../../params/engine-condition0-select"/>
     <step>-0.1</step>
     <min>0</min>
     <max>1.0</max>
@@ -732,14 +732,14 @@
    <h>35</h>
    <binding>
     <command>property-adjust</command>
-    <property alias="../../../../params/engine-mixture0-select"/>
+    <property alias="../../../../params/engine-condition0-select"/>
     <step>0.1</step>
     <min>0</min>
     <max>1.0</max>
     <wrap>false</wrap>
    </binding>
  </action>
-<!-- engine mixture 1 -->
+<!-- engine condition 1 -->
  <action>
    <name>small decrease</name>
    <button>0</button>
@@ -749,7 +749,7 @@
    <h>35</h>
    <binding>
     <command>property-adjust</command>
-    <property alias="../../../../params/engine-mixture1-select"/>
+    <property alias="../../../../params/engine-condition1-select"/>
     <step>-0.01</step>
     <min>0</min>
     <max>1.0</max>
@@ -766,7 +766,7 @@
    <h>35</h>
    <binding>
     <command>property-adjust</command>
-    <property alias="../../../../params/engine-mixture1-select"/>
+    <property alias="../../../../params/engine-condition1-select"/>
     <step>0.01</step>
     <min>0</min>
     <max>1.0</max>
@@ -783,7 +783,7 @@
    <h>35</h>
    <binding>
     <command>property-adjust</command>
-    <property alias="../../../../params/engine-mixture1-select"/>
+    <property alias="../../../../params/engine-condition1-select"/>
     <step>-0.1</step>
     <min>0</min>
     <max>1.0</max>
@@ -800,14 +800,14 @@
    <h>35</h>
    <binding>
     <command>property-adjust</command>
-    <property alias="../../../../params/engine-mixture1-select"/>
+    <property alias="../../../../params/engine-condition1-select"/>
     <step>0.1</step>
     <min>0</min>
     <max>1.0</max>
     <wrap>false</wrap>
    </binding>
   </action>
-<!-- engine-mixture 0 and 1 -->
+<!-- engine-condition 0 and 1 -->
   <action>
    <name>small decrease</name>
    <button>0</button>
@@ -817,7 +817,7 @@
    <h>35</h>
    <binding>
     <command>property-adjust</command>
-    <property alias="../../../../params/engine-mixture0-select"/>
+    <property alias="../../../../params/engine-condition0-select"/>
     <step>-0.01</step>
     <min>0</min>
     <max>1.0</max>
@@ -825,7 +825,7 @@
    </binding>
    <binding>
     <command>property-adjust</command>
-    <property alias="../../../../params/engine-mixture1-select"/>
+    <property alias="../../../../params/engine-condition1-select"/>
     <step>-0.01</step>
     <min>0</min>
     <max>1.0</max>
@@ -842,7 +842,7 @@
    <h>35</h>
    <binding>
     <command>property-adjust</command>
-    <property alias="../../../../params/engine-mixture0-select"/>
+    <property alias="../../../../params/engine-condition0-select"/>
     <step>0.01</step>
     <min>0</min>
     <max>1.0</max>
@@ -850,7 +850,7 @@
    </binding>
    <binding>
     <command>property-adjust</command>
-    <property alias="../../../../params/engine-mixture1-select"/>
+    <property alias="../../../../params/engine-condition1-select"/>
     <step>0.01</step>
     <min>0</min>
     <max>1.0</max>
@@ -866,7 +866,7 @@
    <h>35</h>
    <binding>
     <command>property-adjust</command>
-    <property alias="../../../../params/engine-mixture0-select"/>
+    <property alias="../../../../params/engine-condition0-select"/>
     <step>-0.1</step>
     <min>0</min>
     <max>1.0</max>
@@ -874,7 +874,7 @@
    </binding>
    <binding>
     <command>property-adjust</command>
-    <property alias="../../../../params/engine-mixture1-select"/>
+    <property alias="../../../../params/engine-condition1-select"/>
     <step>-0.1</step>
     <min>0</min>
     <max>1.0</max>
@@ -891,7 +891,7 @@
    <h>35</h>
    <binding>
     <command>property-adjust</command>
-    <property alias="../../../../params/engine-mixture0-select"/>
+    <property alias="../../../../params/engine-condition0-select"/>
     <step>0.1</step>
     <min>0</min>
     <max>1.0</max>
@@ -899,7 +899,7 @@
    </binding>
    <binding>
     <command>property-adjust</command>
-    <property alias="../../../../params/engine-mixture1-select"/>
+    <property alias="../../../../params/engine-condition1-select"/>
     <step>0.1</step>
     <min>0</min>
     <max>1.0</max>

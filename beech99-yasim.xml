@@ -14,6 +14,8 @@
  <approach speed="71" aoa="12" fuel="0.8">
   <control-setting axis="/controls/engines/engine[0]/throttle" value="0.2"/>
   <control-setting axis="/controls/engines/engine[1]/throttle" value="0.2"/>
+  <control-setting axis="/controls/engines/engine[0]/condition" value="1.0"/>
+  <control-setting axis="/controls/engines/engine[1]/condition" value="1.0"/>
   <control-setting axis="/controls/engines/engine[0]/propeller-pitch"
                    value="1.0"/>
   <control-setting axis="/controls/engines/engine[1]/propeller-pitch"
@@ -26,6 +28,8 @@
   <control-setting axis="/controls/flight/elevator-trim" value="0.24"/>
   <control-setting axis="/controls/engines/engine[0]/throttle" value="1.0"/>
   <control-setting axis="/controls/engines/engine[1]/throttle" value="1.0"/>
+  <control-setting axis="/controls/engines/engine[0]/condition" value="1.0"/>
+  <control-setting axis="/controls/engines/engine[1]/condition" value="1.0"/>
   <control-setting axis="/controls/engines/engine[0]/propeller-pitch"
                    value="0.85"/>
   <control-setting axis="/controls/engines/engine[1]/propeller-pitch"
@@ -119,15 +123,19 @@
   <turbine-engine
             eng-power="680" eng-rpm="1700" alt="9000"
             flat-rating="680"
-            min-n2="65" max-n2="100"
+            min-n2="50" max-n2="101.5"
             bsfc="0.78"/>
   <actionpt x="-2.70" y="2.10" z="0.25"/>
   <control-input axis="/controls/engines/engine[0]/throttle"
             control="THROTTLE"/>
+  <control-input axis="/controls/engines/engine[0]/condition"
+            control="CONDLEVER"/>
   <control-input axis="/controls/engines/engine[0]/starter"
             control="STARTER"/>
   <control-input axis="/controls/engines/engine[0]/propeller-pitch"
             control="ADVANCE"/>
+  <control-input axis="/controls/engines/engine[0]/propeller-feather"
+            control="PROPFEATHER"/>
  </propeller>
 
  <propeller x="-2.70" y="-2.10" z="0.25"
@@ -138,15 +146,19 @@
   <turbine-engine
             eng-power="680" eng-rpm="1700" alt="9000"
             flat-rating="680"
-            min-n2="65" max-n2="100"
+            min-n2="50" max-n2="101.5"
             bsfc="0.78"/>
   <actionpt x="-2.70" y="-2.10" z="0.25"/>
   <control-input axis="/controls/engines/engine[1]/throttle"
             control="THROTTLE"/>
+  <control-input axis="/controls/engines/engine[1]/condition"
+            control="CONDLEVER"/>
   <control-input axis="/controls/engines/engine[1]/starter"
             control="STARTER"/>
   <control-input axis="/controls/engines/engine[1]/propeller-pitch"
             control="ADVANCE"/>
+  <control-input axis="/controls/engines/engine[1]/propeller-feather"
+            control="PROPFEATHER"/>
  </propeller>
 
 

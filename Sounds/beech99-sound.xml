@@ -42,7 +42,7 @@
   <engine>
    <name>engine1</name>
    <mode>looped</mode>
-   <path>Sounds/turboprop1.wav</path>
+   <path>Sounds/whine.wav</path>
    <property>/engines/engine[0]/running</property>
    <position>
     <x>-2.0</x>
@@ -51,6 +51,30 @@
    </position>
    <volume>
     <property>/engines/engine[0]/n2</property>
+    <factor>0.01</factor>
+    <min>0.0</min>
+    <max>1.1</max>
+   </volume>
+   <pitch>
+    <property>/engines/engine[0]/n2</property>
+    <factor>0.01</factor>
+    <min>0.0</min>
+    <max>1.1</max>
+   </pitch>
+  </engine>
+
+  <prop>
+   <name>prop1</name>
+   <mode>looped</mode>
+   <path>Sounds/turboprop1.wav</path>
+   <property>/engines/engine[0]/running</property>
+   <position>
+    <x>-2.0</x>
+    <y>0.0</y>
+    <z>-2.0</z>
+   </position>
+   <volume>
+    <property>/engines/engine[0]/rpm</property>
     <factor>0.01</factor>
     <min>0.0</min>
     <max>1.0</max>
@@ -62,7 +86,7 @@
     <max>2.0</max>
     <offset>0.3</offset>
    </pitch>
-  </engine>
+  </prop>
 
 <!-- Engine 2 -->
 
@@ -103,7 +127,7 @@
   <engine>
    <name>engine2</name>
    <mode>looped</mode>
-   <path>Sounds/turboprop1.wav</path>
+   <path>Sounds/whine.wav</path>
    <property>/engines/engine[1]/running</property>
    <position>
     <x>2.0</x>
@@ -112,6 +136,30 @@
    </position>
    <volume>
     <property>/engines/engine[1]/n2</property>
+    <factor>0.01</factor>
+    <min>0.0</min>
+    <max>1.1</max>
+   </volume>
+   <pitch>
+    <property>/engines/engine[1]/n2</property>
+    <factor>0.01</factor>
+    <min>0.0</min>
+    <max>1.1</max>
+   </pitch>
+  </engine>
+
+  <prop>
+   <name>prop2</name>
+   <mode>looped</mode>
+   <path>Sounds/turboprop1.wav</path>
+   <property>/engines/engine[1]/running</property>
+   <position>
+    <x>-2.0</x>
+    <y>0.0</y>
+    <z>-2.0</z>
+   </position>
+   <volume>
+    <property>/engines/engine[1]/rpm</property>
     <factor>0.01</factor>
     <min>0.0</min>
     <max>1.0</max>
@@ -123,7 +171,7 @@
     <max>2.0</max>
     <offset>0.3</offset>
    </pitch>
-  </engine>
+  </prop>
 
   <rumble>
    <name>rumble</name>
