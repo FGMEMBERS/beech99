@@ -54,10 +54,10 @@ October 23 2001 John Check, fgpanels@rockfish.net
    <!-- Only enable one of the following: -->
 
    <!-- lightly loaded -->
-   <!-- <passenger-lbs>100</passenger-lbs> -->
+   <passenger-lbs>100</passenger-lbs>
 
    <!-- max load with 0.8 fuel fraction -->
-   <passenger-lbs>2178</passenger-lbs>
+   <!-- <passenger-lbs>2178</passenger-lbs> -->
 
    <!-- max load with 1.0 fuel fraction -->
    <!-- <passenger-lbs>1878</passenger-lbs> -->
