@@ -1,8 +1,15 @@
 <!-- http://www.airliners.net/info/stats.main?id=66 -->
 <!-- http://www.takeflightvideo.com/beech99.htm -->
 <!-- http://www.flywestwind.com/WTC/Pprograms/turboprops.htm -->
+<!-- http://www.skyquestinternational.com/Performance%20Beech%2099%20.htm -->
 
-<airplane mass="9619">
+<!-- empty weight is 5722 lbs, max operating weight is 10400 lbs, max fuel -->
+<!-- load is 2400 lbs (which is shouldn't be included in the mass -->
+<!-- number below.  With a full fuel load, that leaves 2278 lbs -->
+<!-- remaining for other things like the pilots and passengers and -->
+<!-- baggage.   Let's split the difference and assume 5722 + 1139 = -->
+<!-- 6861. -->
+<airplane mass="6861">
 
 <approach speed="90" aoa="8">
   <!-- <control-setting axis="/controls/flight/elevator" value="-0.3"/> -->
