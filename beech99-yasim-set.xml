@@ -36,7 +36,6 @@ October 23 2001 John Check, fgpanels@rockfish.net
   </systems>
   
   <sound>
-   <audible>true</audible>
    <path>Aircraft/beech99/Sounds/beech99-sound.xml</path>
   </sound>
 
