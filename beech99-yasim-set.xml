@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<!--
+************************************************************************
+Cessna 310R simulation config. This files ties together all the components
+used by FGFS to represent the C310R. Components include the flight data 
+model, instrument panel, and external 3D model.
+3D models can be downloaded from http://home.t-online.de/home/Wolfram.Kuss/
+
+October 23 2001 John Check, fgpanels@rockfish.net
+************************************************************************
+-->
+
+<PropertyList>
+ <sim>
+
+  <description>Beech 99 (YASim)</description>
+
+  <flight-model>yasim</flight-model>
+  <aero>beech99-yasim</aero>
+  <fuel-fraction>1.0</fuel-fraction>
+
+  <panel>
+   <path>Aircraft/mybeech99/beech99-panel.xml</path>
+   <visibility>true</visibility>
+  </panel>
+
+  <model>
+   <path>Aircraft/mybeech99/Models/beech99-model.xml</path>
+  </model> 
+
+   <systems>
+    <electrical>
+      <path>Aircraft/mybeech99/beech99-electrical.xml</path>
+    </electrical>
+  </systems>
+  
+  <sound>
+   <audible>true</audible>
+   <path>Aircraft/mybeech99/beech99-sound.xml</path>
+  </sound>
+
+  <hud>
+   <enable3d>false</enable3d>
+  </hud>
+
+ </sim>
+
+ <controls>
+  <engines>
+   <engine n="0">
+    <magnetos>3</magnetos>
+   </engine>
+   <engine n="1">
+    <magnetos>3</magnetos>
+   </engine>
+  </engines>
+ </controls>
+
+ <engines>
+  <engine n="0">
+   <rpm>1000</rpm>
+  </engine>
+  <engine n="1">
+   <rpm>1000</rpm>
+  </engine>
+ </engines>
+
+</PropertyList>
+
+

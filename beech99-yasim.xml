@@ -1,0 +1,137 @@
+<!-- http://www.takeflightvideo.com/beech99.htm -->
+
+<airplane mass="9619">
+
+<approach speed="90" aoa="5">
+  <control-setting axis="/controls/engines/engine[0]/throttle" value="0.4"/>
+  <control-setting axis="/controls/engines/engine[1]/throttle" value="0.4"/>
+  <control-setting axis="/controls/engines/engine[0]/mixture" value="1.0"/>
+  <control-setting axis="/controls/engines/engine[1]/mixture" value="1.0"/>
+  <control-setting axis="/controls/engines/engine[0]/propeller-pitch" value="0.5"/>
+  <control-setting axis="/controls/engines/engine[1]/propeller-pitch" value="0.5"/>
+  <control-setting axis="/controls/flight/flaps" value="1.0"/>
+  <control-setting axis="/controls/gear/gear-down" value="1"/>
+</approach>
+<cruise speed="247" alt="20000">
+  <control-setting axis="/controls/engines/engine[0]/throttle" value="1.0"/>
+  <control-setting axis="/controls/engines/engine[1]/throttle" value="1.0"/>
+  <control-setting axis="/controls/engines/engine[0]/mixture" value="1.0"/>
+  <control-setting axis="/controls/engines/engine[1]/mixture" value="1.0"/>
+  <control-setting axis="/controls/engines/engine[0]/propeller-pitch" value="1.0"/>
+  <control-setting axis="/controls/engines/engine[1]/propeller-pitch" value="1.0"/>
+  <control-setting axis="/controls/flight/flaps" value="0.0"/>
+  <control-setting axis="/controls/gear/gear-down" value="0"/>
+</cruise>
+
+<!-- 13.58 (161 pixels) long, 11.86 pixels/meter -->
+
+<cockpit x="-3.60" y="0.26" z="1.18"/>
+
+<fuselage ax="0.00"  ay="0" az="0" bx="-3.60" by="0" bz="0"
+          width="1.50" taper="0"/>
+<fuselage ax="-3.60"  ay="0" az="0" bx="-7.26" by="0" bz="0"
+          width="1.60" taper="0"/>
+<fuselage ax="-7.26"  ay="0" az="0" bx="-13.58" by="0" bz="0"
+          width="0.80" taper="0"/>
+
+<wing x="-6.00" y="0.80" z="-0.18" length ="6.41" chord ="2.45"
+      sweep="0" dihedral="5" taper="0.5" camber="0.1">
+  <stall aoa="16" width="4" peak="1.5"/>
+  <flap0 start="0" end=".5" lift="1.5" drag="1.2"/>
+  <flap1 start=".55" end=".94" lift="1.3" drag="1.2"/>
+  <control-input axis="/controls/flight/flaps" control="FLAP0"/>
+  <control-speed control="FLAP0" transition-time="5"/>
+  <control-output control="FLAP0" prop="/surface-positions/flap-pos-norm"/>
+  <control-input axis="/controls/flight/aileron" control="FLAP1" split="true"/>
+  <control-input axis="/controls/flight/aileron-trim" control="FLAP1" split="true"/>
+  <control-output control="FLAP1" side="left"
+		  prop="/surface-positions/left-aileron-pos-norm"/>
+  <control-output control="FLAP1" side="right"
+		  prop="/surface-positions/right-aileron-pos-norm"/>
+</wing>
+
+<hstab x="-12.48" y="0.42" z="0.76" length ="3.12" chord ="1.60"
+       sweep="12" dihedral="7" taper="0.55">
+  <stall aoa="16" width="4" peak="1.5"/>
+  <flap0 start="0" end="1" lift="1.68" drag="1.2"/>
+  <control-input axis="/controls/flight/elevator" control="FLAP0"/>
+  <control-input axis="/controls/flight/elevator-trim" control="FLAP0"/>
+  <control-output control="FLAP0" prop="/surface-positions/elevator-pos-norm"/>
+</hstab>
+
+<vstab x="-12.26" y="0.00" z="1.18" length ="3.16" chord ="2.11"
+       sweep="22" taper="0.57">
+  <stall aoa="16" width="4" peak="1.5"/>
+  <flap0 start="0" end="1" lift="1.3" drag="1.2"/>
+  <control-input axis="/controls/flight/rudder" control="FLAP0" invert="true"/>
+  <control-input axis="/controls/flight/rudder-trim" control="FLAP0" invert="true"/>
+  <control-output control="FLAP0" prop="/surface-positions/rudder-pos-norm"/>
+</vstab>
+
+<!-- I know the total fuel capacity is 2400 lbs, but the number and
+     position of tanks is just a WAG for now -->
+<tank x="-5.00" y="4.00" z="0.44" capacity="400"/>
+<tank x="-5.00" y="2.00" z="-0.15" capacity="800"/>
+<tank x="-5.00" y="-2.00" z="-0.15" capacity="800"/>
+<tank x="-5.00" y="-4.00" z="0.44" capacity="400"/>
+
+<gear x="-0.51" y="0.00" z="-1.35" compression=".5" retract-time="7">
+  <control-input axis="/controls/flight/rudder" control="STEER"/>
+  <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
+  <control-speed control="EXTEND" transition-time="7"/>
+  <control-output control="EXTEND" prop="/gear/gear[2]/position-norm"/>
+</gear>
+
+<gear x="-6.07" y="2.02" z="-1.35" compression=".3" retract-time="7">
+  <control-input axis="/controls/gear/brake-left" control="BRAKE"/>
+  <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
+  <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
+  <control-speed control="EXTEND" transition-time="6.2"/>
+  <control-output control="EXTEND" prop="/gear/gear[0]/position-norm"/>
+</gear>
+
+<gear x="-6.07" y="-2.02" z="-1.35" compression=".3" retract-time="7">
+  <control-input axis="/controls/gear/brake-right" control="BRAKE"/>
+  <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
+  <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
+  <control-speed control="EXTEND" transition-time="6"/>
+  <control-output control="EXTEND" prop="/gear/gear[1]/position-norm"/>
+</gear>
+
+<propeller x="-2.70" y="2.10" z="0.25"
+           mass="800" moment="12" radius="1.0"
+           eng-power="680" eng-rpm="2700"
+           turbo-mul="2" wastegate-mp="40"
+           cruise-power="157" cruise-speed="195"
+           cruise-rpm="2100" cruise-alt="20000"
+           min-rpm="800" max-rpm="2700">
+  <actionpt x="-2.70" y="2.10" z="0.25"/>
+  <control-input axis="/controls/engines/engine[0]/throttle" control="THROTTLE"/>
+  <control-input axis="/controls/engines/engine[0]/starter" control="STARTER"/>
+  <control-input axis="/controls/engines/engine[0]/magnetos" control="MAGNETOS"/>
+  <control-input axis="/controls/engines/engine[0]/mixture" control="MIXTURE"/>
+  <control-input axis="/controls/engines/engine[0]/propeller-pitch" control="ADVANCE"/>
+</propeller>
+
+<propeller x="-2.70" y="-2.10" z="0.25"
+           mass="800" moment="12" radius="1.0"
+           eng-power="680" eng-rpm="2700"
+           turbo-mul="2" wastegate-mp="40"
+           cruise-power="157" cruise-speed="195"
+           cruise-rpm="2100" cruise-alt="20000"
+           min-rpm="800" max-rpm="2700">
+  <actionpt x="-2.70" y="-2.10" z="0.25"/>
+  <control-input axis="/controls/engines/engine[1]/throttle" control="THROTTLE"/>
+  <control-input axis="/controls/engines/engine[1]/starter" control="STARTER"/>
+  <control-input axis="/controls/engines/engine[1]/magnetos" control="MAGNETOS"/>
+  <control-input axis="/controls/engines/engine[1]/mixture" control="MIXTURE"/>
+  <control-input axis="/controls/engines/engine[1]/propeller-pitch" control="ADVANCE"/>
+</propeller>
+
+<ballast x="0.00" y="0.26" z="0.0" mass="1000"/> <!-- balance the aircraft -->
+<ballast x="-3.60" y="0.26" z="0.0" mass="180"/> <!-- pilot -->
+<ballast x="-3.60" y="0" z="0.0" mass="240"/>    <!-- cockpit -->
+
+<weight x="-4.24" y="0" z="0" mass-prop="/yasim/c310/passenger-lbs"/>
+
+</airplane>
