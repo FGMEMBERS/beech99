@@ -15,7 +15,7 @@ Dec 28, 2002 Michael Selig, m-selig@uiuc.edu
  <sim>
 
   <description>Beech 99</description>
-  <author>Michael Selig</author>
+  <author>Chuck Dome, Michael Selig (FDM)</author>
 
   <flight-model>larcsim</flight-model>
   <aero>uiuc</aero>
