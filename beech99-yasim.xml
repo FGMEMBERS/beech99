@@ -11,7 +11,7 @@
 <!-- using the <weight> tag -->
 <airplane mass="5722">
 
- <approach speed="90" aoa="8">
+ <approach speed="71" aoa="12" fuel="0.8">
   <control-setting axis="/controls/engines/engine[0]/throttle" value="0.2"/>
   <control-setting axis="/controls/engines/engine[1]/throttle" value="0.2"/>
   <control-setting axis="/controls/engines/engine[0]/propeller-pitch"
@@ -22,7 +22,7 @@
   <control-setting axis="/controls/gear/gear-down" value="1"/>
  </approach>
 
- <cruise speed="310" alt="20000"> <!-- 247 indicated -->
+ <cruise speed="310" alt="20000" fuel="0.8"> <!-- 247 indicated -->
   <control-setting axis="/controls/flight/elevator-trim" value="0.24"/>
   <control-setting axis="/controls/engines/engine[0]/throttle" value="1.0"/>
   <control-setting axis="/controls/engines/engine[1]/throttle" value="1.0"/>
@@ -47,8 +47,8 @@
 
  <wing x="-5.75" y="0.80" z="-0.18" length ="6.41" chord ="2.45"
       sweep="0" dihedral="5" taper="0.5" camber="0.1">
-  <stall aoa="16" width="4" peak="1.5"/>
-  <flap0 start="0" end=".57" lift="1.6" drag="1.3"/>
+  <stall aoa="14" width="4" peak="1.5"/>
+  <flap0 start="0" end=".57" lift="1.4" drag="1.3"/>
   <flap1 start=".57" end=".95" lift="1.3" drag="1.2"/>
   <control-input axis="/controls/flight/flaps" control="FLAP0"/>
   <control-speed control="FLAP0" transition-time="5"/>
