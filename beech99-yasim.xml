@@ -123,7 +123,7 @@
   <turbine-engine
             eng-power="680" eng-rpm="1700" alt="9000"
             flat-rating="680"
-            min-n2="50" max-n2="101.5"
+            n2-low-idle="50" n2-high-idle="70" n2-max="101.5"
             bsfc="0.78"/>
   <actionpt x="-2.70" y="2.10" z="0.25"/>
   <control-input axis="/controls/engines/engine[0]/throttle"
@@ -146,7 +146,7 @@
   <turbine-engine
             eng-power="680" eng-rpm="1700" alt="9000"
             flat-rating="680"
-            min-n2="50" max-n2="101.5"
+            n2-low-idle="50" n2-high-idle="70" n2-max="101.5"
             bsfc="0.78"/>
   <actionpt x="-2.70" y="-2.10" z="0.25"/>
   <control-input axis="/controls/engines/engine[1]/throttle"
