@@ -43,6 +43,9 @@ October 23 2001 John Check, fgpanels@rockfish.net
    <enable3d>false</enable3d>
   </hud>
 
+  <help>
+   <title>Beech 99</title>
+  </help>
  </sim>
 
  <!-- aircraft specific loading -->

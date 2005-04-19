@@ -61,5 +61,9 @@ Dec 28, 2002 Michael Selig, m-selig@uiuc.edu
    </config>
   </view>
 
+  <help>
+   <title>Beech 99</title>
+  </help>
+
  </sim>
 </PropertyList>
