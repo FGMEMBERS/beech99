@@ -5,10 +5,477 @@
  <path>beech99.ac</path>
 
  <offsets>
-  <z-m>-.6</z-m>
+  <z-m>-.25</z-m>
   <x-m>0.8</x-m>
   <pitch-deg>0</pitch-deg>
  </offsets>
+ 
+ 
+ <panel>
+        <name>Panel3D</name>
+        <path>Aircraft/beech99/beech99-panel3d.xml</path>
+        <bottom-left>
+            <x-m>-2.240</x-m>
+            <y-m>-0.550</y-m>
+            <z-m> 0.780</z-m>
+        </bottom-left>
+        <bottom-right>
+            <x-m>-2.240</x-m>
+            <y-m> 0.600</y-m>
+            <z-m> 0.780</z-m>
+        </bottom-right>
+        <top-left>
+            <x-m>-2.280</x-m>
+            <y-m>-0.550</y-m>
+            <z-m> 1.111</z-m>
+        </top-left>
+    </panel>
 
+ <animation>
+  <type>select</type>
+  <object-name>Propeller_Left</object-name>
+  <condition>
+   <less-than>
+    <property>engines/engine[0]/rpm</property>
+    <value>650</value>
+   </less-than>
+  </condition>
+ </animation>
 
+ <animation>
+  <type>select</type>
+  <object-name>Propeller_Left_Fast</object-name>
+  <condition>
+   <greater-than>
+    <property>engines/engine[0]/rpm</property>
+    <value>648</value>
+   </greater-than>
+  </condition>
+ </animation>
+
+ <animation>
+  <type>select</type>
+  <object-name>Propeller_Right</object-name>
+  <condition>
+   <less-than>
+    <property>engines/engine[1]/rpm</property>
+    <value>650</value>
+   </less-than>
+  </condition>
+ </animation>
+
+ <animation>
+  <type>select</type>
+  <object-name>Propeller_Right_Fast</object-name>
+  <condition>
+   <greater-than>
+    <property>engines/engine[1]/rpm</property>
+    <value>648</value>
+   </greater-than>
+  </condition>
+ </animation>
+
+<animation>
+  <type>spin</type>
+  <object-name>Propeller_Left</object-name>
+  <property>/engines/engine[0]/rpm</property>
+  <center>
+   <x-m>-3.10</x-m>
+   <y-m>-2.05</y-m>
+   <z-m>0.61</z-m>
+  </center>
+  <axis>
+   <x>1.0</x>
+   <y>0.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+
+<animation>
+  <type>spin</type>
+  <object-name>Propeller_Left_Fast</object-name>
+  <property>/engines/engine[0]/rpm</property>
+  <center>
+   <x-m>-3.10</x-m>
+   <y-m>-2.05</y-m>
+   <z-m>0.61</z-m>
+  </center>
+  <axis>
+   <x>1.0</x>
+   <y>0.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+
+<animation>
+  <type>spin</type>
+  <object-name>Propeller_Right</object-name>
+  <property>/engines/engine[1]/rpm</property>
+  <center>
+   <x-m>-3.10</x-m>
+   <y-m>1.96</y-m>
+   <z-m>0.61</z-m>
+  </center>
+  <axis>
+   <x>1.0</x>
+   <y>0.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+
+<animation>
+  <type>spin</type>
+  <object-name>Propeller_Right_Fast</object-name>
+  <property>/engines/engine[1]/rpm</property>
+  <center>
+   <x-m>-3.10</x-m>
+   <y-m>1.96</y-m>
+   <z-m>0.61</z-m>
+  </center>
+  <axis>
+   <x>1.0</x>
+   <y>0.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+ 
+ <animation>
+  <type>rotate</type>
+  <object-name>Nose_Wheel</object-name>
+  <property>surface-positions/rudder-pos-norm</property>
+  <factor>-35</factor>
+  <center>
+   <x-m>-4.79</x-m>
+   <y-m>0.0</y-m>
+   <z-m>0.09</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>0</y>
+   <z>1</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>Nose_Wheel</object-name>
+  <property>gear/gear[0]/position-norm</property>
+  <factor>120</factor>
+  <offset-deg>-120</offset-deg>
+  <min-deg>-90</min-deg>
+  <max-deg>0</max-deg>
+  <center>
+   <x-m>-4.79</x-m>
+   <y-m>0.0</y-m>
+   <z-m>0.11</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ 
+  <animation>
+  <type>rotate</type>
+  <object-name>Nose_Wheel_Spring</object-name>
+  <property>gear/gear[0]/position-norm</property>
+  <factor>120</factor>
+  <offset-deg>-120</offset-deg>
+  <min-deg>-90</min-deg>
+  <max-deg>0</max-deg>
+  <center>
+   <x-m>-4.79</x-m>
+   <y-m>0.0</y-m>
+   <z-m>0.11</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>Rear_Wheels_Left</object-name>
+  <property>gear/gear[1]/position-norm</property>
+  <factor>120</factor>
+  <offset-deg>-120</offset-deg>
+  <min-deg>-98</min-deg>
+  <max-deg>0</max-deg>
+  <center>
+   <x-m>-0.24</x-m>
+   <y-m>-2.06</y-m>
+   <z-m>0.03</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>-1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>Rear_Wheels_Right</object-name>
+  <property>gear/gear[2]/position-norm</property>
+  <factor>120</factor>
+  <offset-deg>-120</offset-deg>
+  <min-deg>-98</min-deg>
+  <max-deg>0</max-deg>
+  <center>
+   <x-m>-0.24</x-m>
+   <y-m>2.06</y-m>
+   <z-m>0.03</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>-1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ 
+ <animation>
+  <type>rotate</type>
+  <object-name>Rear_Wheels_Left_Spr</object-name>
+  <property>gear/gear[1]/position-norm</property>
+  <factor>120</factor>
+  <offset-deg>-120</offset-deg>
+  <min-deg>-98</min-deg>
+  <max-deg>0</max-deg>
+  <center>
+   <x-m>-0.24</x-m>
+   <y-m>-2.06</y-m>
+   <z-m>0.03</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>-1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>Rear_Wheels_Right_Spr</object-name>
+  <property>gear/gear[2]/position-norm</property>
+  <factor>120</factor>
+  <offset-deg>-120</offset-deg>
+  <min-deg>-98</min-deg>
+  <max-deg>0</max-deg>
+  <center>
+   <x-m>-0.24</x-m>
+   <y-m>1.96</y-m>
+   <z-m>-0.01</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>-1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>Rear_Wheels_Lft_Lft</object-name>
+  <property>gear/gear[1]/position-norm</property>
+  <factor>120</factor>
+  <offset-deg>-120</offset-deg>
+  <min-deg>-90</min-deg>
+  <max-deg>0</max-deg>
+  <center>
+   <x-m>-0.56</x-m>
+   <y-m>-2.25</y-m>
+   <z-m>0.03</z-m>
+  </center>
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ 
+ <animation>
+  <type>rotate</type>
+  <object-name>Rear_Wheels_Lft_Rgt</object-name>
+  <property>gear/gear[1]/position-norm</property>
+  <factor>120</factor>
+  <offset-deg>-120</offset-deg>
+  <min-deg>-90</min-deg>
+  <max-deg>0</max-deg>
+  <center>
+   <x-m>-0.56</x-m>
+   <y-m>-1.85</y-m>
+   <z-m>0.03</z-m>
+  </center>
+  <axis>
+   <x>1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ 
+ <animation>
+  <type>rotate</type>
+  <object-name>Rear_Wheels_Rgt_Lft</object-name>
+  <property>gear/gear[2]/position-norm</property>
+  <factor>120</factor>
+  <offset-deg>-120</offset-deg>
+  <min-deg>-90</min-deg>
+  <max-deg>0</max-deg>
+  <center>
+   <x-m>-0.56</x-m>
+   <y-m>1.85</y-m>
+   <z-m>0.03</z-m>
+  </center>
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ 
+ <animation>
+  <type>rotate</type>
+  <object-name>Rear_Wheels_Rgt_Rgt</object-name>
+  <property>gear/gear[2]/position-norm</property>
+  <factor>120</factor>
+  <offset-deg>-120</offset-deg>
+  <min-deg>-90</min-deg>
+  <max-deg>0</max-deg>
+  <center>
+   <x-m>-0.56</x-m>
+   <y-m>2.25</y-m>
+   <z-m>0.03</z-m>
+  </center>
+  <axis>
+   <x>1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ 
+ <animation>
+ <type>rotate</type>
+ <object-name>Rudder</object-name>
+ <property>controls/flight/rudder</property>
+ <factor>22</factor>
+ <center>
+  <x-m>6.86</x-m>
+  <y-m>0.0</y-m>
+  <z-m>2.41</z-m>
+ </center>
+ <axis>
+  <x>0.20</x>
+  <y>0.0</y>
+  <z>0.80</z>
+ </axis>
+</animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>Flaps_Left</object-name>
+  <property>surface-positions/flap-pos-norm</property>
+  <factor>30</factor> <!-- check -->
+  <center>
+   <x-m>0.55</x-m>
+   <y-m>-2.22</y-m>
+   <z-m>-0.30</z-m>
+  </center>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>-0.1</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>Flaps_Right</object-name>
+  <property>surface-positions/flap-pos-norm</property>
+  <factor>30</factor> <!-- check -->
+  <center>
+   <x-m>0.55</x-m>
+   <y-m>2.22</y-m>
+   <z-m>-0.30</z-m>
+  </center>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0.1</z>
+  </axis>
+ </animation>
+ 
+  <animation>
+  <type>rotate</type>
+  <object-name>Aileron_Left</object-name>
+  <property>surface-positions/left-aileron-pos-norm</property>
+  <factor>-15</factor> <!-- check -->
+  <center>
+   <x-m>0.56</x-m>
+   <y-m>-4.75</y-m>
+   <z-m>0.60</z-m>
+  </center>
+  <axis>
+   <x>-0.08</x>
+   <y>-1.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>Aileron_Right</object-name>
+  <property>surface-positions/left-aileron-pos-norm</property>
+  <factor>-15</factor> <!-- check -->
+  <center>
+   <x-m>0.56</x-m>
+   <y-m>4.70</y-m>
+   <z-m>0.6</z-m>
+  </center>
+  <axis>
+   <x>-0.08</x>
+   <y>1.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+ 
+  <animation>
+  <type>rotate</type>
+  <object-name>Elevator_Left</object-name>
+  <object-name>Elevator_Right</object-name>
+  <property>surface-positions/elevator-pos-norm</property>
+  <factor>15</factor> <!-- check -->
+  <center>
+   <x-m>6.98</x-m>
+   <y-m>0.0</y-m>
+   <z-m>1.30</z-m>
+  </center>
+  <axis>
+   <x>0.0</x>
+   <y>1.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+ 
+ 
+ <!-- Lightning -->
+ 
+ <animation>
+  <name>BeaconFlasher</name>
+  <type>timed</type>
+  <object-name>BeaconOff</object-name>
+  <object-name>BeaconOn</object-name>
+  <duration-sec>1.0</duration-sec>
+ </animation>
+
+ <animation>
+  <type>select</type>
+  <object-name>BeaconFlasher</object-name>
+  <condition>
+   <property>controls/lighting/beacon</property>
+  </condition>
+ </animation>
+   
 </PropertyList>
