@@ -1,0 +1,117 @@
+<?xml version="1.0"?>
+<!--
+************************************************************************
+Beech99 simulation config. This files ties together all the components
+used by FGFS to represent the Beech99. Components include the flight data 
+model, instrument panel, and external 3D model.
+
+
+October 23 2001 John Check, fgpanels@rockfish.net
+************************************************************************
+-->
+
+<PropertyList>
+ <sim>
+
+  <description>Beech 99 (YASim)</description>
+  <status>Development</status>
+  <flight-model>yasim</flight-model>
+  <aero>beech99-yasim</aero>
+  <!-- 2400 lbs max capacity so this specifies 1920 lbs. -->
+  <fuel-fraction>0.8</fuel-fraction>
+  
+  <panel>
+   <path>Aircraft/beech99/beech99-panel.xml</path>
+   <visibility>false</visibility>
+  </panel>
+
+  <model>
+   <path>Aircraft/beech99/Models/beech99-model.xml</path>
+  </model> 
+  <!-- X links/rechts Y hoog/laag Z achter/voor -->
+    <view n="0">
+        <internal archive="y">true</internal>
+        <name>Cockpit</name>
+        <type>lookfrom</type>
+        <internal type="bool">true</internal>
+        <config>
+            <x-offset-m type="double">-0.42</x-offset-m>
+            <y-offset-m type="double">0.95</y-offset-m>
+            <z-offset-m type="double">-0.78</z-offset-m>
+            <pitch-offset-deg>-15</pitch-offset-deg>
+            <default-field-of-view-deg>60.0</default-field-of-view-deg>
+        </config>
+    </view>
+
+    <current-view>
+        <field-of-view>60.0</field-of-view>
+    </current-view>
+
+   <systems>
+    <electrical>
+      <path>Aircraft/beech99/beech99-electrical.xml</path>
+    </electrical>
+  </systems>
+  
+  <sound>
+   <path>Aircraft/beech99/Sounds/beech99-sound.xml</path>
+  </sound>
+
+  <hud>
+   <enable3d>false</enable3d>
+  </hud>
+
+    <virtual-cockpit>true</virtual-cockpit>
+    <allow-toggle-cockpit>true</allow-toggle-cockpit>
+
+  <help>
+   <title>Beech 99</title>
+  </help>
+ </sim>
+
+ <!-- aircraft specific loading -->
+ <yasim>
+  <beech99>
+   <pilot-lbs>400</pilot-lbs>
+
+   <!-- Only enable one of the following: -->
+
+   <!-- lightly loaded -->
+   <passenger-lbs>100</passenger-lbs>
+
+   <!-- max load with 0.8 fuel fraction -->
+   <!-- <passenger-lbs>2178</passenger-lbs> -->
+
+   <!-- max load with 1.0 fuel fraction -->
+   <!-- <passenger-lbs>1878</passenger-lbs> -->
+
+  </beech99>
+ </yasim>
+
+ <controls>
+  <engines>
+   <engine n="0">
+    <magnetos>3</magnetos>
+   </engine>
+   <engine n="1">
+    <magnetos>3</magnetos>
+   </engine>
+  </engines>
+  <gear>
+     <brake-parking>1</brake-parking>
+  </gear>
+ 
+ </controls>
+
+ <engines>
+  <engine n="0">
+   <rpm>1000</rpm>
+  </engine>
+  <engine n="1">
+   <rpm>1000</rpm>
+  </engine>
+ </engines>
+
+</PropertyList>
+
+

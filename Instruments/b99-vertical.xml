@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+
+<!--
+
+-->
+
+<PropertyList>
+ <name>Vertical Speed Indicator</name>
+ <w-base>256</w-base>
+ <h-base>256</h-base>
+ <layers>
+  <layer>
+   <name>background</name>
+   <texture>
+    <path>Aircraft/beech99/Instruments/Textures/b99-vsi-256.rgb</path>
+    <x1>0.0</x1>
+    <y1>0.0</y1>
+    <x2>1.0</x2>
+    <y2>1.0</y2>
+   </texture>
+   <w>256</w>
+   <h>256</h>
+  </layer>
+  
+<!-- fix misc.rgb -->
+  <layer>
+   <name>needle</name>
+   <texture>
+    <path>Aircraft/Instruments/Textures/misc-1.rgb</path>
+    <x1>0.8</x1>
+    <y1>0.78125</y1>
+    <x2>0.8375</x2>
+    <y2>1.0</y2>
+   </texture>
+   <w>12</w>
+   <h>96</h>
+   <transformations>
+    <transformation>
+     <type>rotation</type>
+     <property>/instrumentation/vertical-speed-indicator/indicated-speed-fpm</property>
+     <min>-3000.0</min>
+     <max>3000.0</max>
+     <scale>0.084</scale>
+     <offset>270.0</offset>
+  
+      <interpolation>
+      <entry><ind>  -3000</ind><dep>   -2059</dep></entry>
+       <entry><ind>  -2500</ind><dep>   -1776</dep></entry>
+       <entry><ind>  -2000</ind><dep>   -1551</dep></entry>
+       <entry><ind>  -1500</ind><dep>   -1232</dep></entry>
+       <entry><ind>  -1000</ind><dep>   -996</dep></entry>
+       <entry><ind>  -500</ind><dep>   -413</dep></entry>
+       <entry><ind>  -400</ind><dep>   -339</dep></entry>
+       <entry><ind>  -300</ind><dep>   -239</dep></entry>
+       <entry><ind>  -200</ind><dep>   -151</dep></entry>
+       <entry><ind>  -100</ind><dep>   -64</dep></entry>
+       <entry><ind>  0</ind><dep>   0</dep></entry>
+       <entry><ind>  100</ind><dep>   88</dep></entry>
+       <entry><ind>  200</ind><dep>   174</dep></entry>
+       <entry><ind>  300</ind><dep>   280</dep></entry>
+       <entry><ind>  400</ind><dep>   360</dep></entry>
+       <entry><ind>  500</ind><dep>   425</dep></entry>
+       <entry><ind>  1000</ind><dep>   998</dep></entry>
+       <entry><ind>  1500</ind><dep>   1273</dep></entry>
+       <entry><ind>  2000</ind><dep>   1583</dep></entry>
+       <entry><ind>  2500</ind><dep>   1809</dep></entry>
+       <entry><ind>  3000</ind><dep>   2082</dep></entry>    
+      </interpolation>
+     
+    </transformation>
+    <transformation>
+     <type>y-shift</type>
+     <offset>40.0</offset>
+    </transformation>
+   </transformations>
+  </layer>
+  <layer>
+  <name>button</name>
+  <texture>
+  <path>Aircraft/Instruments/Textures/misc-1.rgb</path>
+  <x1>0.6171875</x1>
+  <y1>0.2421875</y1>
+  <x2>0.7890625</x2>
+  <y2>0.4140625</y2>
+  </texture>
+  <w>15</w>
+  <h>15</h>
+  </layer>
+ </layers>
+</PropertyList>

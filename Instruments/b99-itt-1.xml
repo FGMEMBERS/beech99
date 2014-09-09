@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+
+<!--
+
+-->
+
+<PropertyList>
+
+ <name>ITT 1</name>
+
+  <w-base>256</w-base>
+  <h-base>256</h-base>
+   
+   <layers>
+    <layer>
+     <name>gauge face</name>
+     <texture>   
+     <path>Aircraft/beech99/Instruments/Textures/b99-itt-256.rgb</path>
+     <x1>0.0</x1>
+     <y1>0.0</y1>
+     <x2>1.0</x2>
+     <y2>1.0</y2>
+     </texture>
+    </layer>
+    
+    <layer>
+    <name>needle</name>
+   <texture>
+    <path>Aircraft/beech99/Instruments/Textures/b99-misc-1.rgb</path>
+    <x1>0.8</x1>
+    <y1>0.78125</y1>
+    <x2>0.8375</x2>
+    <y2>1.0</y2>
+   </texture>
+   <w>12.2</w>
+   <h>98</h>
+   
+   <transformations>
+     <transformation>
+      <type>rotation</type>
+      <property>controls/engines/engine[1]/throttle</property>
+      <min>0</min>
+      <max>100</max>
+      <scale>165</scale>
+      <offset>100</offset>
+       <interpolation>
+       <entry><ind>  0</ind><dep>   0</dep></entry>
+       <entry><ind>  0.001</ind><dep>   0.30</dep></entry>
+       <entry><ind>  0.10</ind><dep>   0.30</dep></entry>
+       <entry><ind>  0.20</ind><dep>   0.47</dep></entry>
+       <entry><ind> 0.30</ind><dep>  0.65</dep></entry>
+       <entry><ind> 0.40</ind><dep>  0.80</dep></entry>
+       <entry><ind> 0.50</ind><dep>  0.90</dep></entry>
+       <entry><ind> 0.60</ind><dep>  0.96</dep></entry>
+       <entry><ind> 0.70</ind><dep>  1.01</dep></entry>
+      <entry><ind> 0.80</ind><dep>  1.05</dep></entry>
+      <entry><ind> 0.90</ind><dep>  1.08</dep></entry>
+      <entry><ind> 1.00</ind><dep>  1.10</dep></entry>
+       </interpolation>                      
+     </transformation>
+     
+     <transformation>
+      <type>rotation</type>
+      <property>controls/engines/engine[1]/mixture</property>
+      <min>0</min>
+      <max>1.0</max>
+      <scale>-15</scale>
+      </transformation>
+     
+    <transformation>
+    <type>y-shift</type>
+    <offset>44</offset>
+    </transformation>
+    
+   </transformations>
+   
+  </layer> 
+
+ <layer>
+  <name>button</name>
+  <texture>
+  <path>Aircraft/beech99/Instruments/Textures/b99-misc-1.rgb</path>
+  <x1>0.6171875</x1>
+  <y1>0.2421875</y1>
+  <x2>0.7890625</x2>
+  <y2>0.4140625</y2>
+  </texture>
+  <w>28</w>
+  <h>28</h>
+  </layer>
+
+
+  </layers>
+</PropertyList>
+

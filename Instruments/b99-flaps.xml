@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<PropertyList>
+ <name>Flap Indicator</name>
+ <w-base>256</w-base>
+ <h-base>256</h-base>
+ <layers>
+  <layer>
+   <name>gauge face</name>
+   <texture>   
+    <path>Aircraft/beech99/Instruments/Textures/b99-flaps-256.rgb</path>
+    <x1>0</x1>
+    <y1>0</y1>
+    <x2>1</x2>
+    <y2>1</y2>
+   </texture>
+   <w>256</w>
+   <h>256</h>
+  </layer>
+  <layer>
+   <name>needle</name>
+   <texture>
+    <path>Aircraft/beech99/Instruments/Textures/b99-misc-1.rgb</path>
+    <x1>0.8</x1>
+    <y1>0.78125</y1>
+    <x2>0.8375</x2>
+    <y2>1.0</y2>
+   </texture>
+   <w>12</w>
+   <h>88</h>
+   <transformations>
+    <transformation>
+     <type>rotation</type>
+     <property>/controls/flight/flaps[0]</property>
+     <scale>180.0</scale>
+     <offset>0</offset>
+    </transformation>
+    <transformation>
+     <type>y-shift</type>
+     <offset>32</offset>
+    </transformation>
+   </transformations>
+  </layer> 
+ 
+  </layers>
+</PropertyList>
+

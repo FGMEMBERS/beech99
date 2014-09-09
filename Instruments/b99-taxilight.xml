@@ -1,0 +1,77 @@
+<PropertyList>
+
+ <name>taxi</name>
+ <w-base>35</w-base>
+ <h-base>47</h-base>
+
+<layers>
+ <layer>
+   <name>Taxi light</name>
+   <type>switch</type>
+    <layer>
+     <condition>
+      <property>/controls/lighting/taxi-light</property>
+     </condition>
+     <name>on</name>
+     <texture>
+     <path>Aircraft/beech99/Instruments/Textures/b99-switchedup-256.rgb</path>
+     <x1>0.0</x1>
+     <y1>0.0</y1>
+     <x2>0.13671875</x2>
+     <y2>0.171875</y2>
+     </texture>
+     <w>35</w>
+     <h>44</h>
+     <transformations>  
+    <transformation>
+    <type>y-shift</type>
+    <offset>-3</offset>
+    </transformation>
+   </transformations>
+    </layer>
+    
+    <layer>
+     <name>off</name>
+     <texture>
+     <path>Aircraft/beech99/Instruments/Textures/b99-switcheddn-256.rgb</path>
+     <x1>0.0</x1>
+     <y1>0.0</y1>
+     <x2>0.13671875</x2>
+     <y2>0.18359375</y2>
+     </texture>
+     <w>35</w>
+     <h>47</h>
+   <transformations>  
+    <transformation>
+    <type>y-shift</type>
+    <offset>-14</offset>
+    </transformation>
+   </transformations>
+  
+   </layer>
+  </layer>
+   
+ </layers>
+
+ <actions>
+
+  <action>
+   <name>toggle taxi</name>
+   <button>0</button>
+   <x>-15</x>
+   <y>-45</y>
+   <w>35</w>
+   <h>55</h>
+   <binding>
+    <command>property-toggle</command>
+    <property>/controls/lighting/taxi-light</property>
+   
+    <min>1.0</min>
+    <max>0.0</max>
+    
+   </binding>
+  </action> 
+
+</actions>
+
+</PropertyList>

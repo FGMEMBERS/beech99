@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+
+<!--
+
+-->
+
+<PropertyList>
+
+ <name>engine rpm 1</name>
+<!--
+Specify the size that the gauge will be
+--> 
+  <w-base>256</w-base>
+  <h-base>256</h-base>
+   
+   <layers>
+    <layer>
+     <name>gauge face</name>
+     <texture>   
+     <path>Aircraft/beech99/Instruments/Textures/b99-rpm-256.rgb</path>
+     <x1>0.0</x1>
+     <y1>0.0</y1>
+     <x2>1.0</x2>
+     <y2>1.0</y2>
+     </texture>
+    </layer>
+    
+    <layer>
+    <name>needle</name>
+   <texture>
+    <path>Aircraft/beech99/Instruments/Textures/b99-misc-1.rgb</path>
+    <x1>0.8</x1>
+    <y1>0.78125</y1>
+    <x2>0.8375</x2>
+    <y2>1.0</y2>
+   </texture>
+   <w>12.2</w>
+   <h>98</h>
+   <transformations>
+     <transformation>
+      <type>rotation</type>
+      <property>engines/engine[1]/n2</property>
+      <min>0.0</min>
+      <max>110.0</max>
+      <scale>2.63</scale>
+    </transformation>
+     
+    <transformation>
+    <type>y-shift</type>
+    <offset>44</offset>
+    </transformation>
+    
+   </transformations>
+  </layer> 
+   
+ <layer>
+  <name>button</name>
+  <texture>
+  <path>Aircraft/beech99/Instruments/Textures/b99-misc-1.rgb</path>
+  <x1>0.6171875</x1>
+  <y1>0.2421875</y1>
+  <x2>0.7890625</x2>
+  <y2>0.4140625</y2>
+  </texture>
+  <w>28</w>
+  <h>28</h>
+  </layer>
+
+  </layers>
+</PropertyList>
+

@@ -1,0 +1,461 @@
+<?xml version="1.0"?>
+
+<!--
+Beechcraft 99 panel.
+March 2004
+Iain Dawson
+_______________________________________________________________________
+
+This is a panel configuration file for the open-source flight
+simulator FlightGear (www.flightgear.org).  The file is an XML-encoded
+FlightGear property list defining the panel's background texture and
+the location (and optionally, size) of the instruments that will
+appear on the panel.
+
+Each instrument is, itself, defined in an XML-encoded property list
+in a separate file.
+
+Co-ordinates are relative to the *bottom* left corner of the screen
+(as in OpenGL).  The total FlightGear window is always considered to
+be 1024x768, whatever its actual display size on the screen.  All
+paths are relative to $FG_ROOT.
+
+The <x>...</x> and <y>...</y> coordinates of each instrument are for
+its mid-point.
+
+Note that the name of the element defining each instrument must be
+different, or else instrument definitions will be overwritten:
+that's not particularly XML-ish, but that's how property lists
+work in FlightGear right now.
+
+Each instrument has its own preferred width and height, but you can
+override those by providing <w>..</w> and <h>..</h> properties with the
+<x>...</x> and <y>...</y> properties.
+
+
+-->
+
+<!DOCTYPE PropertyList SYSTEM "panel.dtd">
+
+<PropertyList>
+
+ <name>Beech 2d to 3d Panel</name>
+<background>Aircraft/beech99/transparent-bg.rgb</background> -->
+
+ <w>1536</w>
+ <h>512</h>
+ <y-offset>0</y-offset>
+ <view-height>350</view-height>
+
+ <instruments>
+
+  <instrument include="../beech99/Instruments/b99-dme.xml">
+   <name>DME Display</name>
+   <x>205</x>
+   <y>131</y>
+   <w>90</w>
+   <h>46</h>
+  </instrument>
+
+
+ <instrument include="../beech99/Instruments/b99-clock.xml">
+   <name>Chronometer</name>
+   <x>67</x>
+   <y>132</y>
+   <w>50</w>
+   <h>50</h>
+  </instrument>
+
+
+  <instrument include="../beech99/Instruments/b99-asi.xml">
+   <name>Captain Airspeed Indicator</name>
+   <x>70</x>
+   <y>361</y>
+   <w>115</w>
+   <h>115</h>
+  </instrument>
+
+  
+  <instrument include="../beech99/Instruments/b99-turn.xml">
+   <name>Captain Turn Coordinator</name>
+   <x>70</x>
+   <y>237</y>
+   <w>115</w>
+   <h>115</h>
+  </instrument>
+
+
+<instrument include="../beech99/Instruments/b99-asi.xml">
+   <name>First Officer Airspeed Indicator</name>
+   <x>1124</x>
+   <y>348</y>
+   <w>115</w>
+   <h>115</h>
+  </instrument>
+
+  
+  <instrument include="../beech99/Instruments/b99-turn.xml">
+   <name>First Officer Turn Coordinator</name>
+   <x>1124</x>
+   <y>225</y>
+   <w>115</w>
+   <h>115</h>
+  </instrument>
+
+
+  <instrument include="../beech99/Instruments/b99-attitude-indicator.xml">
+   <name>Captain Attitude Indicator</name>
+   <x>206</x>
+   <y>361</y>
+   <w>115</w>
+   <h>115</h>
+  </instrument>
+  
+  
+  <instrument include="../beech99/Instruments/b99-hsi-bk-hi.xml">
+   <name>Captain Horizontal Situation Indicator</name>
+   <x>205</x>
+   <y>234</y>
+   <w>134</w>
+   <h>130</h>
+  </instrument>
+  
+    <instrument include="../beech99/Instruments/b99-attitude-indicator.xml">
+   <name>First Officer Attitude Indicator</name>
+   <x>1260</x>
+   <y>348</y>
+   <w>115</w>
+   <h>115</h>
+  </instrument>
+  
+  
+  <instrument include="../beech99/Instruments/b99-hsi-bk-hi.xml">
+   <name>First Officer Horizontal Situation Indicator</name>
+   <x>1260</x>
+   <y>225</y>
+   <w>134</w>
+   <h>130</h>
+  </instrument>
+
+
+  <instrument include="../beech99/Instruments/b99-altimeter.xml">
+   <name>Altimeter</name>
+   <x>345</x>
+   <y>361</y>
+   <w>115</w>
+   <h>115</h>
+  </instrument>
+
+
+  <instrument include="../beech99/Instruments/b99-vertical.xml">
+   <name>Vertical Velocity Indicator</name>
+   <x>345</x>
+   <y>237</y>
+   <w>115</w>
+   <h>115</h>
+  </instrument>
+
+  <instrument include="../beech99/Instruments/b99-altimeter.xml">
+   <name>First Officer Altimeter</name>
+   <x>1396</x>
+   <y>348</y>
+   <w>115</w>
+   <h>115</h>
+  </instrument>
+
+
+  <instrument include="../beech99/Instruments/b99-vertical.xml">
+   <name>First Officer Vertical Velocity Indicator</name>
+   <x>1396</x>
+   <y>225</y>
+   <w>115</w>
+   <h>115</h>
+  </instrument>
+
+<instrument include="../beech99/Instruments/b99-gear.xml">
+   <name>Gear Lever</name>
+   <x>580</x>
+   <y>30</y>
+   <w>25</w>
+   <h>71</h>
+  </instrument>
+
+<instrument include="../beech99/Instruments/b99-gear-indicator.xml">
+   <name>Gear Indicator Light</name>
+   <x>623</x>
+   <y>33</y>
+   <w>20</w>
+   <h>20</h>
+  </instrument>
+
+  <instrument include="../beech99/Instruments/b99-brakes.xml">
+   <name>Brake Indicator Light</name>
+   <x>670</x>
+   <y>406</y>
+   <w>30</w>
+   <h>15</h>
+  </instrument>
+ 
+  <instrument include="../beech99/Instruments/b99-nav2.xml">
+   <name>VOR 2 Gauge</name>
+   <params>
+    <nav-to-flag>/instrumentation/nav[1]/to-flag</nav-to-flag>
+    <nav-from-flag>/instrumentation/nav[1]/from-flag</nav-from-flag>
+    <nav-radial-selected>/instrumentation/nav[1]/radials/selected-deg</nav-radial-selected>
+    <nav-gs-needle-deflection>/instrumentation/nav[1]/gs-needle-deflection</nav-gs-needle-deflection>
+    <nav-heading-needle-deflection>/instrumentation/nav[1]/heading-needle-deflection</nav-heading-needle-deflection>
+    <nav-has-gs-needle>/sim/instrument-options/nav[1]/has-gs-needle</nav-has-gs-needle>
+    <nav-needles-pivot>/sim/instrument-options/nav[1]/needles-pivot</nav-needles-pivot>
+   </params>
+   <x>346</x>
+   <y>113</y>
+   <w>115</w>
+   <h>115</h>
+  </instrument>
+
+  <instrument include="../beech99/Instruments/b99-markerbeacon.xml">
+   <name>Marker Beacon Indicators</name>
+   <x>349</x>
+   <y>433</y>
+   <w>85</w>
+   <h>18</h>
+  </instrument>
+  
+        
+  <instrument include="../beech99/Instruments/b99-navcom-kx155.xml">
+   <name>NavCom 1 Radio</name>
+   <x>788</x>
+   <y>318</y>
+   <w>359</w>
+   <h>110</h>
+ </instrument>
+
+  <instrument include="../beech99/Instruments/b99-navcom-kx155.xml">
+   <name>NavCom 2 Radio</name>
+   <params>
+   <comm-freq-selected-prop>/instrumentation/comm[1]/frequencies/selected-mhz</comm-freq-selected-prop>
+    <comm-freq-standby-prop>/instrumentation/comm[1]/frequencies/standby-mhz</comm-freq-standby-prop>
+    <nav-freq-selected-prop>/instrumentation/nav[1]/frequencies/selected-mhz</nav-freq-selected-prop>
+    <nav-freq-standby-prop>/instrumentation/nav[1]/frequencies/standby-mhz</nav-freq-standby-prop>
+    <nav-morse-id-volume-prop>/instrumentation/nav[1]/volume</nav-morse-id-volume-prop>
+    <nav-morse-ident-toggle-prop>/instrumentation/nav[1]/ident</nav-morse-ident-toggle-prop>
+   </params>
+   <x>788</x>
+   <y>206</y>
+   <w>359</w>
+   <h>110</h>  
+  </instrument>
+  
+  <instrument include="../beech99/Instruments/b99-adf-radio.xml">
+   <name>ADF Radio</name>
+   <x>788</x>
+   <y>120</y>
+   <w>359</w>
+   <h>57</h>
+  </instrument>
+
+  <instrument include="../beech99/Instruments/b99-autopilot.xml">
+   <name>Autopilot</name>
+   <x>788</x>
+   <y>76</y>
+   <w>359</w>
+   <h>26</h>
+  </instrument>
+
+
+  <instrument include="../beech99/Instruments/b99-itt-0.xml">
+   <name>ITT 0</name>
+   <x>452</x>
+   <y>419</y>
+   <w>60</w>
+   <h>60</h>
+  </instrument>
+  
+  <instrument include="../beech99/Instruments/b99-torque-0.xml">
+   <name>Torque 0</name>
+   <x>452</x>
+   <y>352</y>
+   <w>60</w>
+   <h>60</h>
+  </instrument>
+
+  <instrument include="../beech99/Instruments/b99-prop-0.xml">
+   <name>Propeller 0</name>
+   <x>452</x>
+   <y>284</y>
+   <w>60</w>
+   <h>60</h>
+  </instrument>
+  
+  <instrument include="../beech99/Instruments/b99-enginerpm-0.xml">
+   <name>Engine RPM 0</name>
+   <x>452</x>
+   <y>216</y>
+   <w>60</w>
+   <h>60</h>
+  </instrument>
+  
+  <instrument include="../beech99/Instruments/b99-fuelflow-0.xml">
+   <name>Fuel Flow 0</name>
+   <x>452</x>
+   <y>148</y>
+   <w>60</w>
+   <h>60</h>
+  </instrument>
+
+<instrument include="../beech99/Instruments/b99-oil-0.xml">
+   <name>Oil 0</name>
+   <x>452</x>
+   <y>82</y>
+   <w>60</w>
+   <h>60</h>
+  </instrument>
+
+<instrument include="../beech99/Instruments/b99-itt-1.xml">
+   <name>ITT 1</name>
+   <x>526</x>
+   <y>419</y>
+   <w>60</w>
+   <h>60</h>
+  </instrument>
+  
+  <instrument include="../beech99/Instruments/b99-torque-1.xml">
+   <name>Torque 1</name>
+   <x>526</x>
+   <y>352</y>
+   <w>60</w>
+   <h>60</h>
+  </instrument>
+
+  <instrument include="../beech99/Instruments/b99-prop-1.xml">
+   <name>Propeller 1</name>
+   <x>526</x>
+   <y>284</y>
+   <w>60</w>
+   <h>60</h>
+  </instrument>
+  
+  <instrument include="../beech99/Instruments/b99-enginerpm-1.xml">
+   <name>Engine RPM 1</name>
+   <x>526</x>
+   <y>216</y>
+   <w>60</w>
+   <h>60</h>
+  </instrument>
+  
+  <instrument include="../beech99/Instruments/b99-fuelflow-1.xml">
+   <name>Fuel Flow 1</name>
+   <x>526</x>
+   <y>148</y>
+   <w>60</w>
+   <h>60</h>
+  </instrument>
+
+  <instrument include="../beech99/Instruments/b99-oil-1.xml">
+   <name>Oil 1</name>
+   <x>526</x>
+   <y>82</y>
+   <w>60</w>
+   <h>60</h>
+  </instrument>
+
+
+  <instrument include="../beech99/Instruments/b99-landing-0.xml">
+   <name>Landing Light 0</name>
+   <x>378</x>
+   <y>-38</y>
+   <w>22</w>
+   <h>32</h>
+  </instrument>
+  
+  <instrument include="../beech99/Instruments/b99-beaconlight.xml">
+   <name>Landing Light 1</name>
+   <x>410</x>
+   <y>-38</y>
+   <w>22</w>
+   <h>32</h>
+  </instrument>
+
+  <instrument include="../beech99/Instruments/b99-taxilight.xml">
+   <name>Taxi</name>
+   <x>451</x>
+   <y>-38</y>
+   <w>22</w>
+   <h>32</h>
+  </instrument>
+  
+  <instrument include="../beech99/Instruments/b99-navlight.xml">
+   <name>Nav</name>
+   <x>495</x>
+   <y>-38</y>
+   <w>22</w>
+   <h>32</h>
+  </instrument>
+  
+  <instrument include="../beech99/Instruments/b99-tailflood.xml">
+   <name>Tail Flood</name>
+   <x>542</x>
+   <y>-38</y>
+   <w>22</w>
+   <h>32</h>
+  </instrument>
+
+<instrument include="../beech99/Instruments/b99-antiice-0.xml">
+   <name>Anti Ice 0</name>
+   <x>375</x>
+   <y>-80</y>
+   <w>22</w>
+   <h>32</h>
+  </instrument>
+
+<instrument include="../beech99/Instruments/b99-antiice-1.xml">
+   <name>Anti Ice 1</name>
+   <x>410</x>
+   <y>-80</y>
+   <w>22</w>
+   <h>32</h>
+  </instrument>
+  
+  <instrument include="../beech99/Instruments/b99-prop-auto.xml">
+   <name>Prop Auto</name>
+   <x>451</x>
+   <y>-80</y>
+   <w>22</w>
+   <h>32</h>
+  </instrument>
+
+  <instrument include="../beech99/Instruments/b99-prop-manual.xml">
+   <name>Prop Manual</name>
+   <x>479</x>
+   <y>-80</y>
+   <w>22</w>
+   <h>32</h>
+  </instrument>
+  
+  <instrument include="../beech99/Instruments/b99-pitot-0.xml">
+   <name>Pitot Heat 0</name>
+   <x>532</x>
+   <y>-80</y>
+   <w>22</w>
+   <h>32</h>
+  </instrument>
+  
+  <instrument include="../beech99/Instruments/b99-pitot-1.xml">
+   <name>Pitot Heat 1</name>
+   <x>562</x>
+   <y>-80</y>
+   <w>22</w>
+   <h>32</h>
+  </instrument>
+
+  <instrument include="../beech99/Instruments/b99-tailnumber.xml">
+   <name>Tail umber</name>
+   <x>738</x>
+   <y>506</y>
+   <w>72</w>
+   <h>18</h>
+  </instrument>
+
+ </instruments>
+
+</PropertyList>

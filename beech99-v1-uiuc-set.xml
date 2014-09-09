@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<!--
+************************************************************************
+Beech 99 simulation config.  This file ties together all
+the components used by FGFS to represent the aircraft.
+
+For more details see UIUC/beech99-v1/README.beech99.html
+
+Dec 28, 2002 Michael Selig, m-selig@uiuc.edu
+************************************************************************
+-->
+
+<PropertyList>
+
+ <sim>
+
+  <description>Beech 99</description>
+  <author>Chuck Dome, Michael Selig (FDM)</author>
+
+  <flight-model>larcsim</flight-model>
+  <aero>uiuc</aero>
+  <aircraft-dir>Aircraft/UIUC/beech99-v1</aircraft-dir>
+
+
+  <systems>
+    <electrical>
+      <path>Aircraft/beech99/beech99-electrical.xml</path>
+    </electrical>
+  </systems>
+
+  <sound>
+   <path>Aircraft/beech99/Sounds/beech99-sound.xml</path>
+  </sound>
+
+  <panel>
+   <path>Aircraft/beech99/beech99-panel.xml</path>
+   <visibility>true</visibility>
+  </panel>
+
+
+  <model>
+   <path>Aircraft/beech99/Models/beech99-model.xml</path>
+  </model>
+
+<!--
+<engines>
+  <engine n="0">
+   <engine-num type="int">0</engine-num>
+   <running>true</running>
+ </engine>
+ <engine n="1">
+   <engine-num type="int">1</engine-num>
+   <running>true</running>
+ </engine>
+</engines>
+-->
+
+  <view n="1">
+   <config>
+    <eye-heading-deg-path>/orientation/gamma-horiz-deg</eye-heading-deg-path>
+   </config>
+  </view>
+
+  <help>
+   <title>Beech 99</title>
+  </help>
+
+ </sim>
+</PropertyList>
